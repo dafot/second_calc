@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.calculator__wrapper{
+    max-width: 1350px;
+    margin: 0 auto;
+    border-radius: 16px;
+}
+.calculator {
+    background-color: rgb(214, 212, 212);
+    display: grid;
+    padding: 20px;
+}
+.calculator__inputs-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 10px;
+    margin-bottom: 20px;
+}
+.calculator__input {
+    padding-left: 43px;
+    padding-right: 21px;
+    height: 54px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 20px;
+    position: relative;
+}
+
+
+.calculator__button {
+    padding: 24px 32px;
+    background-color: #000;
+    border-radius: 32px;
+    appearance: none;
+    color: #fff;
+    width: 250px;
+    font-size: 20px;
+    margin: 0 auto;
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition-property: color;
+    transition-property: background;
+    transition-duration: .2s;
+}
+.calculator__button:hover {
+    color: #000;
+    background: #fff;
+}
+
+.calculator__total-sum {
+    background-color: #fff;
+    border: 1px solid;
+    padding: 20px;
+    padding-left: 54px;
+    font-size: 54px;
+    border-radius: 16px;
+}
+.calculator__form-label {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.calculator__input-box{
+    position: relative;
+}
+.calculator__input-box::before,
+.calculator__total-sum::before {
+    content: "$";
+    color: #000;
+    margin-right: 10px;
+}
+.calculator__input-box::before{
+    position: absolute;
+    top: 56px;
+    z-index: 5;
+    font-size: 25px;
+    left: 25px;
+}
+.calculator__input,
+.calculator__total-sum{
+    overflow: auto;
+}
+.calculator-error {
+    color: red;
+    font-size: 20px;
+}
+.calculator__total-sum-label {
+    margin-bottom: 20px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+@media(max-width: 1024px) {
+    .calculator__inputs-list{
+        grid-template-columns: 1fr;
+    }
+    .calculator__total-sum{
+        font-size: 40px;
+    }
+}
+@media(max-width: 768px){
+    .calculator__button{
+        width: 100%;
+    }
+}

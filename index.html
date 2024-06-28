@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Second calculator</title>
+</head>
+<body>
+    <div class="calculator__wrapper">
+        <div class="calculator">
+            <ul class="calculator__inputs-list">
+                <li class="calculator__inputs-li">
+                    <div class="calculator__input-box">
+                        <label class="calculator__form-label" for="economic-damages">Economic Damages</label>
+                        <input id="economic-damages" class="calculator__input economic-damages" type="text" placeholder="0">
+                    </div>                    
+                </li>
+                <li class="calculator__inputs-li">
+                    <div class="calculator__input-box">
+                        <label class="calculator__form-label" for="non-economic-damage">Non-Economic Damage </label>
+                        <input id="non-economic-damage" class="calculator__input non-economic-damage" type="text" placeholder="0">
+                    </div>                   
+                </li>
+            </ul>
+            <button class="calculator__button">Try Again</button>
+            <div class="calculator__total-sum-wrap">
+                <label class="calculator__total-sum-label" for="total-sum">Total Settlement Value</label>
+                <div id="total-sum" class="calculator__total-sum">0</div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
