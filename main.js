@@ -70,14 +70,14 @@ function formatNumberWithCommas() {
     const nonEconomicDamageInput = document.querySelector('.non-economic-damage');
   
     economicDamagesInput.addEventListener('input', function() {
-      const value = this.value.replace(/,/g, ''); // Удаляем существующие запятые
-      const formattedValue = value.replace(/\B(?=(\d{3})+(?!\d))/g, ','); // Добавляем запятые каждые 3 разряда
+      const value = this.value.replace(/,/g, '');
+      const formattedValue = value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
       this.value = formattedValue;
     });
   
     nonEconomicDamageInput.addEventListener('input', function() {
-      const value = this.value.replace(/,/g, ''); // Удаляем существующие запятые
-      const formattedValue = value.replace(/\B(?=(\d{3})+(?!\d))/g, ','); // Добавляем запятые каждые 3 разряда
+      const value = this.value.replace(/,/g, ''); 
+      const formattedValue = value.replace(/\B(?=(\d{3})+(?!\d))/g, ','); 
       this.value = formattedValue;
     });
   }
